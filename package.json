@@ -1,0 +1,50 @@
+{
+  "name": "javascript-regex-utils",
+  "version": "1.0.0",
+  "description": "js 常用正则方法库",
+  "main": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "keywords": [
+    "regex",
+    "regexp",
+    "RE",
+    "Regular Expression"
+  ],
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "rm -rf lib && npx babel src -d lib -x \".ts, .tsx\"",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "npm run lint -- --fix",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisong981174580/javascript-regex-utils.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisong981174580/javascript-regex-utils/issues"
+  },
+  "homepage": "https://github.com/lisong981174580/javascript-regex-utils#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "typescript": "^3.7.5",
+    "@types/jest": "^26.0.7",
+    "jest": "^25.1.0",
+    "tslint": "^5.14.0"
+  }
+}
