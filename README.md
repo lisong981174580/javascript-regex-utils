@@ -17,6 +17,8 @@ npm install javascript-regex-utils --save
 #### Usage
 
 ```js
+  import { replaceRegexMatchedText } from 'javascript-regex-utils';
+
   replaceRegexMatchedText('我是中国人${xxxx}', /\${(\w+)}/g, 'allen'); // 我是中国人allen
   replaceRegexMatchedText('我是中国人${name}', /\${(\w+)}/g, {
     name: 'allen',
