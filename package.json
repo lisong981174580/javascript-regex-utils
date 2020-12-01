@@ -1,6 +1,6 @@
 {
   "name": "javascript-regex-utils",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "js 常用正则方法库",
   "main": "./lib/index.js",
   "files": [
