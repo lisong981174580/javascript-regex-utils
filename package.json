@@ -16,7 +16,9 @@
     "Regular Expression"
   ],
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
     "build": "rm -rf lib && npx babel src -d lib -x \".ts, .tsx\"",
     "lint": "tslint --project tsconfig.json",
     "lint:fix": "npm run lint -- --fix",
@@ -40,11 +42,13 @@
     "@babel/core": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
-    "typescript": "^3.7.5",
     "@types/jest": "^26.0.7",
-    "jest": "^25.1.0",
-    "tslint": "^5.14.0"
+    "jest": "^25.5.4",
+    "ts-jest": "^26.4.4",
+    "tslint": "^5.14.0",
+    "typescript": "^3.7.5"
   }
 }

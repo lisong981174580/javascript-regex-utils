@@ -25,3 +25,23 @@ export function replaceRegexMatchedText(
 
   return flag ? '' : resultStr;
 }
+
+/**
+ * 替换正则表达式匹配的文本优化后的版本
+ */
+export function replaceSpecialStr(
+  str: string,
+  reg: RegExp = /\[(\w+)\]/g,
+  map: Record<string, string>,
+) {
+  if (!str || typeof str !== 'string') return str;
+
+  return str.replace(reg, (template, key) => {
+    if (map[key]) {
+      return map[key];
+    }
+
+    return template;
+  });
+}
+
